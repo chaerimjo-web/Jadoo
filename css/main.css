@@ -30,7 +30,7 @@ body{
     line-height: var(--lh);
     font-family: "Poppins", sans-serif;
     */
-    font: var(--fz)/ var(--lh)/"Poppins", sans-serif;
+    font: var(--fz)/ var(--lh) "Poppins", sans-serif;
     color: var(--txt-color);
 }
 
