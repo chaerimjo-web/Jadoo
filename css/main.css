@@ -22,6 +22,9 @@
     width: var(--container);
     margin: 0 auto;
 }
+main>section{
+    padding: 90px 90px;
+}
 
 /* 폰트 */
 body{
@@ -32,6 +35,23 @@ body{
     */
     font: var(--fz)/ var(--lh) "Poppins", sans-serif;
     color: var(--txt-color);
+}
+main .sec_sub_tt{
+    font-size: 18px;
+    line-height: 27px;
+    color: #5E6282;
+    margin-bottom: 10px;
+}
+main .sec_tt{
+    font-size: 50px;
+    line-height: 65px;
+    font-family: "Volkhov", serif;
+    color: #14183E;
+    margin-bottom: 60px;
+}
+
+.txt_center{
+    text-align: center;
 }
 
 /* 링크 버튼 */
@@ -209,4 +229,72 @@ header .content .desc p{
     left: -32px;
     z-index: -1;
 }
+.services_list li:after{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #DF6951;
+    border-radius: 30px 0 10px 0;
+    left: 20px;
+    bottom: 20px;
+    z-index: -1;
+    transition: 0.3s;
+}
 
+.services_list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.services_list li{
+    width: 267px;
+    padding: 0 42px 45px;
+    box-sizing: border-box;
+    text-align: center;
+    background: var(--white);
+    border-radius: 36px;
+    transition: 0.3s;
+    position: relative;
+}
+.services_list li:hover{
+    background: var(--white);
+    box-shadow: 0 2px 3px rgba(0,0,0, 0.048),
+    0 8.15px 6.52px rgba(0,0,0,0.079),
+    0 20px 13px rgba(0,0,0,0.01),
+    0 38px 25px rgba(0,0,0,.0121),
+    0 64px 47px rgba(0,0,0,.0152),
+    0 100px 80px rgba(0,0,0,0.02);
+}
+.services_list li:hover:after{
+    transform: translate(-53px, 53px);
+}
+
+.services_list figure{
+    height: 154px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services_list li h3 {
+    font-size: 20px;
+    color: #1E1D4C;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    line-height: 27px;
+    margin-bottom: 15px;
+    white-space: nowrap;
+}
+.services > div{
+    position: relative;
+}
+.services > div:after{
+    content: '';
+    position: absolute;
+    background: url(../images/services_right_top.svg)no-repeat;
+    right: -75px;
+    top: 0;
+    width: 156px;
+    height: 166px;
+}
