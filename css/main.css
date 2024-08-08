@@ -156,3 +156,57 @@ header .content .desc p{
     width: 477px;
     margin-bottom: 34px;
 }
+.cta{
+    display: flex;
+    gap: 44px;
+    align-items: center;
+}
+.cta a{
+    background: #F1A501;
+    line-height: 60px;
+    color: var(--white);
+    border-radius: 10px;
+    padding: 0 26px;
+    display: inline-block;
+    font-family: 'Product Sans Medium Regular';
+    box-shadow: 0 20px 35px rgba(241,165,1,.15);
+}
+
+.cta button{
+    display: inline-flex;
+    gap: 20px;
+    align-items: center;
+    font-style: 17px;
+    font-weight: 500;
+    color: #686D77;
+}
+
+.cta button .icon{
+    display: flex;
+    width: 52px;
+    height: 52px;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    border-radius: 50%;
+    background: #DF6951;
+    box-shadow: 0 15px 30px rgba(223,105,81, .3);
+}
+.desc h2{
+    position: relative;
+    z-index: 0;
+}
+.desc em{
+    position: relative;
+}
+.desc em::after{
+    content: '';
+    position: absolute;
+    width: 385px;
+    height: 12px;
+    background: url(../images/header.title.bg.svg)no-repeat;
+    bottom: 15px;
+    left: -32px;
+    z-index: -1;
+}
+
