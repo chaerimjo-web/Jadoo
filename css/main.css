@@ -528,14 +528,12 @@ color: #84829A;
     width: 504px;
     left: 44px;
     top: 123px;
-    left: 0;
     background: var(--white);
-    top: 0;
     padding: 28px 68px 34px 34px;
     border-radius: 10px;
     box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.02), 0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02), 0px 38.519px 25.481px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 8.148px 6.519px 0px rgba(0, 0, 0, 0.01), 0px 1.852px 3.148px 0px rgba(0, 0, 0, 0.00);
     border: 2px solid #F7F7F7;
-    transition: 0.3s;
+    transition: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .tesimonials_list li.active{
     left: 0;
@@ -583,7 +581,7 @@ color: #84829A;
     background: #E5E5E5;
     border-radius: 50%;
 }
-.tesimonials .sec_tt{
+.tesimonials .header .sec_tt{
     margin-bottom: 82px;
 }
 .tesimonials .pager a.active{
