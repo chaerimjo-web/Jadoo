@@ -25,7 +25,14 @@
 main>section{
     padding: 90px 0;
 }
-
+.hidden{
+    position: absolute;
+    left: 0;
+    top: -9999em;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
 /* 폰트 */
 body{
     /*
