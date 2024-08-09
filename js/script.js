@@ -4,10 +4,34 @@ let paginationUp = document.querySelector('.pagination .up');
 let paginationDown = document.querySelector('.pagination .down');
 let currentIdx = 0;
 let tesimonialsListCount = tesimonialsLists.length;
-/**
- pagers를 클릭하면 할일
-    모든 a에서 active를 제거하고, 클릭한 그 요소에 active를 추가
- */
+let partnerList = document.querySelector('.partner_list');
+let partnerListWidth = 234;
+let partnerListCount = document.querySelectorAll('.partner_list li').length;
+let partnerListLeft = 0;
+let partnerListTotalWidth = partnerListWidth * partnerListCount;
+let animation;
+
+//2400px 값
+partnerList.style.width = partnerListTotalWidth+'px';
+
+function movePartnerList(){
+    //partnerListLeft = partnerListLeft -5;
+    partnerListLeft -= 2;
+    if(partnerListLeft === -(partnerListTotalWidth/2)){
+        partnerListLeft = 0;
+    }
+    partnerList.style.left = partnerListLeft+'px';
+    animation = requestAnimationFrame(movePartnerList);
+}
+requestAnimationFrame(movePartnerList);
+
+partnerList.addEventListener('mouseenter',()=>{
+    cancelAnimationFrame(animation)
+});
+partnerList.addEventListener('mouseleave',()=>{
+    requestAnimationFrame(movePartnerList);
+});
+
 
 pagers.forEach((item,idx)=>{
     item.addEventListener('click',(e)=>{
@@ -27,7 +51,7 @@ function showTestimonial(num){
     */
    //참이면 ? 2 : 아니면 3이면 ?  0
 //    num = (num === -1) ? tesimonialsListCount -1 : (num ===3) ? 0: num;
-    num = (num + tesimonialsListCount)  % tesimonialsListCount;
+    num = (num + tesimonialsListCount) % tesimonialsListCount;
     /**
      *num = (1+3) % 3 = 1
      num1 num1
@@ -57,4 +81,3 @@ paginationDown.addEventListener('click',()=>{
 paginationUp.addEventListener('click',()=>{
     showTestimonial(currentIdx - 1);
 });
-
