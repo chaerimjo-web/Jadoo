@@ -19,9 +19,11 @@ let onGoingPercent = document.querySelector('.ongoing .percent');
 window.addEventListener('scroll',()=>{
     let scrollAmt = window.scrollY;
     if(scrollAmt >= bookATripOST){
-        bookATrip.classList.add('active');
+        if(!bookATrip.classList.contains('active')){
+            bookATrip.classList.add('active');
+            onGoingNumAnimation();
+        };
     }
-    onGoingNumAnimation();
 });
 
 function onGoingNumAnimation(){
@@ -30,10 +32,11 @@ function onGoingNumAnimation(){
     let animation = setInterval(()=>{
         num += 1;   //작동할 때마다 1씩 는다.
         bar.style.width = num+'%';
+        onGoingPercent.innerHTML = num+'%';
         if(num === targetNum){
             clearInterval(animation);
         }
-    },30)
+    },50)
 }
 
 //2400px 값
