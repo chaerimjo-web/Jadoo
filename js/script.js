@@ -10,6 +10,31 @@ let partnerListCount = document.querySelectorAll('.partner_list li').length;
 let partnerListLeft = 0;
 let partnerListTotalWidth = partnerListWidth * partnerListCount;
 let animation;
+let bookATrip = document.querySelector('.book_a_trip');
+let bookATripOST = bookATrip.offsetTop - 300;
+let progressBar = document.querySelector('.progress_bar');
+let bar = document.querySelector('.progress_bar .bar');
+let onGoingPercent = document.querySelector('.ongoing .percent');
+
+window.addEventListener('scroll',()=>{
+    let scrollAmt = window.scrollY;
+    if(scrollAmt >= bookATripOST){
+        bookATrip.classList.add('active');
+    }
+    onGoingNumAnimation();
+});
+
+function onGoingNumAnimation(){
+    let targetNum = Number(bar.getAttribute('data-rate'));
+    let num = 0;
+    let animation = setInterval(()=>{
+        num += 1;   //작동할 때마다 1씩 는다.
+        bar.style.width = num+'%';
+        if(num === targetNum){
+            clearInterval(animation);
+        }
+    },30)
+}
 
 //2400px 값
 partnerList.style.width = partnerListTotalWidth+'px';
