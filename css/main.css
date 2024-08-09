@@ -708,3 +708,76 @@ color: #84829A;
     height: 166px;
     z-index: -1;
 }
+
+/* FOOTER*/
+footer{
+    margin-top: 86px;
+    padding: 80px 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+footer > div{
+    display: flex;
+    justify-content: space-between;
+}
+footer nav {
+    display: flex;
+    gap: 80px;
+    flex: 1;
+    justify-content: center;
+}
+.container .company{
+    width: 207px;
+}
+
+.company h2{
+    font-size: 44px;
+    color: #000;
+    font-weight: 500;
+    line-height: 66px;
+    margin-bottom: 19px;
+}
+.company p{
+    font-size: 13px;
+    color: #5E6282;
+    width: 207px;
+    line-height: 1.24;
+}
+footer nav dt{
+    font-size: 21px;
+    font-weight: 700;
+    color: #080809;
+    line-height: 1.24;
+    margin-bottom: 34px;
+}
+footer nav dd{
+    font-size: 18px;
+    line-height: 1.24;
+    color: #5E6282;
+    gap: 12px;
+    font-weight: 500;
+}
+footer nav dd + dd{
+    margin-top: 12px;
+}
+footer nav dd a{
+    color: var(--txt-color);
+}
+.outbound .sns{
+    display: flex;
+    gap: 25px;
+}
+.outbound .sns li{
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,1);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.outbound .sns li a{
+    color: #080809;
+}
