@@ -710,14 +710,15 @@ color: #84829A;
 }
 
 /* FOOTER*/
-footer{
-    margin-top: 86px;
-    padding: 80px 0;
+/* footer{
+   
     display: flex;
     text-align: center;
     justify-content: center;
-}
+} */
 footer > div{
+    margin-top: 86px;
+    padding: 80px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -755,7 +756,6 @@ footer nav dd{
     font-size: 18px;
     line-height: 1.24;
     color: #5E6282;
-    gap: 12px;
     font-weight: 500;
 }
 footer nav dd + dd{
@@ -767,6 +767,7 @@ footer nav dd a{
 .outbound .sns{
     display: flex;
     gap: 25px;
+    margin-bottom: 26px;
 }
 .outbound .sns li{
     width: 41px;
@@ -780,4 +781,34 @@ footer nav dd a{
 }
 .outbound .sns li a{
     color: #080809;
+}
+.outbound .sns li:hover{
+    background: 
+    conic-gradient(from 90deg at 50% 50%, 
+    #B8D2F1 0deg, 
+    #F289AA 17%, 
+    #C68BF0 29%, 
+    #D164DA 43%, 
+    #C963E8 61%,
+    #BFC2E8 72%,
+    #FFC999 80%, 
+    #D0D8C9 88%, 
+    #BAD0F1 93%, 
+    #CED8CB 100%, 
+    rgba(255, 255, 255, 0.00) 360deg);
+}
+.outbound .sns li a:hover{
+    color: var(--white);
+}
+
+footer .store{
+    display: flex;
+    gap: 7px;
+    margin-top: 16px;
+}
+footer > p{
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.24;
+    margin-top: 84px;
 }
